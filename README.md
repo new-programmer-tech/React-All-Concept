@@ -1,8 +1,12 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Branch ROUTES :- Topics Covered :-
 
-Currently, two official plugins are available:
+  1. import { Outlet } from "react-router-dom"
+  2. All concepts of routing
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Branch ContextAPI:-
+
+  1. Redux:- used in state management, pass data in an organized way.
+  2. context API
+   
