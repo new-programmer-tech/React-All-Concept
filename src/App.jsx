@@ -1,3 +1,4 @@
+
 import { TodoProvider } from "./contexts"
 import { useState ,useEffect } from "react"
 
@@ -49,6 +50,7 @@ function App() {
 
   </TodoProvider>
   )
-}
 
-export default App
+
+export default App;
+ 
