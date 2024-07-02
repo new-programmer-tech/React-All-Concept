@@ -1,5 +1,6 @@
 # REDUX AND REDUX TOOLKIT
 
+
 - store :-
 
 1.  used a global variable
@@ -26,3 +27,4 @@ Here's why we use these commands:
 1. useDispatchHooks use the reducer to make changes in the store
 
 2. slice provide us the reducers
+
