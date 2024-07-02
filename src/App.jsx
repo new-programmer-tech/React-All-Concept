@@ -1,3 +1,5 @@
+import Todo from "./components/Todo"
+import AddTodo from "./components/AddTodo"
 
 import { TodoProvider } from "./contexts"
 import { useState ,useEffect } from "react"
@@ -46,9 +48,12 @@ function App() {
 
 
   return (
-  <TodoProvider value={{addTodo ,deleteTodo ,todos ,toggleCompleted ,updateTodo}}>
 
-  </TodoProvider>
+  <>
+    <AddTodo/>
+    <Todo/>
+  </>
+
   )
 
 
