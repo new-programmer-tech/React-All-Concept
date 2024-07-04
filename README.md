@@ -6,7 +6,7 @@
 1.  used a global variable
 2.  also know as single source of truth
 3.  every application only have 1 store
-4.
+
 
 - reducer ( used when want to make any changes in store ) ->
 - useDispatch
