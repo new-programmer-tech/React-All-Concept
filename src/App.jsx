@@ -1,61 +1,24 @@
-import Todo from "./components/Todo"
-import AddTodo from "./components/AddTodo"
+import Navbar from "./components/navbar/Navbar"
+import Form from "./components/Form/Form"
+import Index from "./components/Index"
 
-import { TodoProvider } from "./contexts"
-import { useState ,useEffect } from "react"
+import { BrowserRouter, Route ,Routes } from "react-router-dom"
+import UserDetails from "./components/Read/UserDetails"
 
 function App() {
 
-  const [todos, setTodos] = useState([])
-
-
-  const addTodo = (todo) => {
-    setTodos((prevTodo)=> [...prevTodo ,{id:Date.now() , ...todo}])
-  }
-
-  const updateTodo = (id ,todo) => {
-    setTodos((prevTodo)=> prevTodo.map((prevTodo) => (prevTodo.id === id ? todo : prevTodo)))
-
-    // or
-
-    // prevTodo.map((todo) => {
-    //   if (todo.id === id) {
-    //     condition
-    //   }
-    // })
-  }
-
-  const deleteTodo = (id) => {
-    setTodos((prevTodo) => prevTodo.filter((todo) => todo.id !== id))
-  }
-
-  const toggleCompleted = (id) => {
-    setTodos((prevTodo) => prevTodo.map((prevTodo) => prevTodo.id === id ? {...prevTodo, completed:!prevTodo.completed}:prevTodo))
-  }
-
-  useEffect(() => {
-  const todos = JSON.parse(localStorage.getItem("todos"))
-
-  if(todos && todos.length > 0) {
-    setTodos(todos)
-  }
-  }, [])
-
-
-  useEffect(() => {
-  localStorage.setItem("todos", JSON.stringify(todos))
-  }, [todos])
-
-
   return (
-
   <>
-    <AddTodo/>
-    <Todo/>
+  <BrowserRouter>
+    <Navbar/>
+    <Routes>
+    <Route path="/" element= {<Index/>}/>
+    <Route path="/create" element= {<Form/>}/>
+    <Route path="/read" element= {<UserDetails/>}/>
+    </Routes>
+  </BrowserRouter>
   </>
-
   )
+}
 
-
-export default App;
- 
+export default App
